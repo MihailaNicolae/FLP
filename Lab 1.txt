@@ -1,0 +1,13 @@
+Problema 1
+let squareSum = \x -> \y -> + (* x x) (* y y) in squareSum 3 4
+
+Problema 2
+
+Cerinta 1
+letrec revRange = \n -> if (isZero n) [] (: (- n 1) (revRange (pred n))) in revRange 4
+
+Cerinta 2
+let range = \n -> letrec revRange = \x -> if (isZero x) [0] (:x (revRange (- x 1))) in reverse (revRange n) in range 4
+
+Problema 3
+let justList = \xs -> (filter isJust xs) in justList [Just 4, Nothing, Just 5, Just 7, Nothing]
